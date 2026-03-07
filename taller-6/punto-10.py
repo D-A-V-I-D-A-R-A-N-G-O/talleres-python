@@ -11,6 +11,5 @@ for i in range(longi):
 
 invertida = lista1[::-1]
 for i in range(longi):
-    print(lista[i], invertida[i])
     final += str(lista[i]*invertida[i]) + " "
 print(final)

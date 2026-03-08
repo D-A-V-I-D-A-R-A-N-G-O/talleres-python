@@ -1,4 +1,4 @@
-x  = int(input())
+x = int(input())
 def fibonacci(x):
     a = 0
     b = 1
@@ -10,4 +10,5 @@ def fibonacci(x):
         a = b
         b = c
     return impri
+
 print(fibonacci(x))

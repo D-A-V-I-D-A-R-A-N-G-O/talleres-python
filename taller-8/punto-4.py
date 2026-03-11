@@ -1,18 +1,26 @@
 import math
 
-def coseno(x, y):
-    impri = ""
+def funcion(x, y):
+    lista_cos = ""
     variador = -1
-    coseno = 1
     exponente = 2
+    cos_valor = 0
+    r = 1
+
     for i in range(x):
-        impri += str(coseno) + ", "
-        vari = variador * (y**exponente/math.factorial(exponente))
-        coseno += vari
+        cos_valor += r
+        if i != x-1:
+            lista_cos += str(round(r, 2)) + ", "
+        else:
+            lista_cos += str(round(r, 2))
+        r = variador * (y ** exponente) / math.factorial(exponente)
         exponente += 2
-        variador = -1 * variador
-        print(impri)
-    return coseno
+        variador *= -1
 
+    print(lista_cos)
+    print(round(cos_valor, 2))
 
-print(coseno(10, 1.0472))
+x = int(input())
+y = float(input())
+
+funcion(x, y)

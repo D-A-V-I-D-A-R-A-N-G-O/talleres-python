@@ -10,10 +10,10 @@ for i in range(numero):
         p = int((numero-4)/2)
         print(" "*p + "****")
     elif i < int(numero/2-2):
-        print(" "*c_e + "*" + " "*c_i + "**" + " " *c_i + "*")
+        print(" "*c_e + "*" + " "*c_i + "**" + " " * c_i + "*")
         c_i -= 1
         c_e += 1
     elif i > int(numero/2):
-        print(" "*c_e2 + "*" + " "*c_i2 + "**" + " " *c_i2 + "*")
+        print(" "*c_e2 + "*" + " "*c_i2 + "**" + " " * c_i2 + "*")
         c_i2 += 1
         c_e2 -= 1

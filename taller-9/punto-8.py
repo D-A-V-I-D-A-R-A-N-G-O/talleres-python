@@ -1,15 +1,14 @@
 def trifelio(x):
-    lista = x.split('-')
-    parte1 = lista[0][:-2]
-    parte2 = lista[0][-2:]
-    palabra = parte2 + parte1
+    a, b = x.split('-')
+    
+    for i in range(1, len(a)):  # todas las divisiones posibles
+        nueva = a[i:] + a[:i]
+        if nueva == b:
+            return "Es trifelio"
+    
+    return "No es trifelio"
 
-    if palabra == lista[1] or len(lista[0]) == 2:
-        return "Es trifelio"
-    else:
-        return "No es trifelio"
 
-
-with open('trifelios.txt', 'r', encoding='utf-8') as trifelios:
-    for linea in trifelios:
+with open('trifelios.txt', 'r', encoding='utf-8') as f:
+    for linea in f:
         print(trifelio(linea.strip()))

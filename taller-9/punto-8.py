@@ -4,7 +4,7 @@ def trifelio(x):
     palabra2 = list(palabra2)
     palabra1.sort()
     palabra2.sort()
-    
+
     if palabra1 == palabra2:
         return "Es trifelio"
     else:

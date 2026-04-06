@@ -7,16 +7,11 @@ delimite = " "
 delimiter = "."
 with open('discursos.txt', 'r', encoding='utf-8') as discurso:
     for linea in discurso:
-        otro.append(linea.lower().strip())
-
-otro = delimite.join(otro)
-discurso = otro.split(". ")
-print(discurso)
-for linea in discurso:
-    cc = 0
-    co = 0
-    for expresion in expresiones_causativas:
-        cc += linea.count(expresion)
-    for expresion in expresiones_opositivas:
-        co += linea.count(expresion)
-    print(f"Opositivos {co} Causativos {cc}")
+        cc = 0
+        co = 0
+        texto = linea.lower().rstrip()
+        for expresion in expresiones_causativas:
+            cc += texto.count(expresion)
+        for expresion in expresiones_opositivas:
+            co += texto.count(expresion)
+        print(f"Opositivos {co} Causativos {cc}")

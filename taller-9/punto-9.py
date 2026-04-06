@@ -1,5 +1,5 @@
 expresiones_opositivas = ["por otro lado", "a pesar de", "en cambio", "mientras que", "no solo", "sin embargo"]
-expresiones_causativas = ["hace que", "obligar a", "convencer a", "inducir a", "permitir que"]
+expresiones_causativas = ["hacer que", "obligar a", "convencer a", "inducir a", "permitir que"]
 
 with open('discursos.txt', 'r', encoding='utf-8') as discurso:
     for linea in discurso:

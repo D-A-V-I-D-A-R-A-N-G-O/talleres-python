@@ -9,7 +9,7 @@ for i in range(0, len(lista)-1, longitud):
         x = "Matriz no identidad"
     else:
         x = "Matriz identidad"
-    lista.pop(i)
+    lista.pop(i) 
 print(lista)
 for i in lista:
     if i == 1:

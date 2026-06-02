@@ -8,28 +8,37 @@ for i in range(longitud):
     for e in range(longitud):
         x = int(input())
         tabla[i].append(x)
-final = longitud
 
+final = 1
 for i in tabla:
     for e in i[:final:]:
-        superior.append(e)
-    final -= 1
-
-
+        inferior.append(e)
+    final += 1
 final = 0
 for i in tabla:
-    for e in i[::-1][final:]:
-        inferior.append(e)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    for e in i[final:]:
+        superior.append(e)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     final += 1
 
-print(superior)
-print(inferior)
+for i in superior:
+    if i == 0:
+        es_supe = False
+        break
+    else:
+        es_supe = True
+        continue
 
-
-
-if es_superior and es_inferior:
+for i in inferior:
+    if i == 0:
+        es_infe = False
+        break
+    else:
+        es_infe = True
+        continue
+        
+if es_supe and es_infe:
     print("No es triangular superior ni inferior")
-elif es_superior and not es_inferior:
+elif es_supe and not es_infe:
     print("Triangular superior")
-elif not es_superior and es_inferior:
+elif not es_supe and es_infe:
     print("Triangular inferior")

@@ -1,35 +1,22 @@
-tabla = []
-longitud = int(input())
+tabla = [[1, 2, 3], [0, 4, 5], [0, 0, 7]]
+longitud = 3
+
 superior = []
 inferior = []
-for i in range(longitud):
-    tabla.append([])
-for i in range(longitud):
-    for e in range(longitud):
-        x = int(input())
-        tabla[i].append(x)
-final = longitud
+
+final = longitud - 1 
 
 for i in tabla:
     for e in i[:final:]:
         superior.append(e)
-    final -= 1
+        final -= 1
 
 
 final = 0
-for i in tabla:
+for i in tabla[::-1]:
     for e in i[::-1][final:]:
         inferior.append(e)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    final += 1
+        final += 1
 
 print(superior)
 print(inferior)
-
-
-
-if es_superior and es_inferior:
-    print("No es triangular superior ni inferior")
-elif es_superior and not es_inferior:
-    print("Triangular superior")
-elif not es_superior and es_inferior:
-    print("Triangular inferior")

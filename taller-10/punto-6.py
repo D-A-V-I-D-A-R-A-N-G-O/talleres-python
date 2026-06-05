@@ -16,12 +16,15 @@ for i in range(filas):
     print("erre es", r)
     
     if r > mayor:
-        mayor = i
+        mayor = r
+        el_mayor = i
     if r < menor:
-        menor = i
+        menor = r
+        el_menor = i
+        
     print("mayor es", mayor)
     print("menor es", menor)
     r =  1
 
-print(mayor)
-print(menor)
+print(el_mayor)
+print(el_menor)

@@ -20,7 +20,7 @@ for i in range(x):
             engagament = "No "
     else:
         d = "Otro dia"
-        if (hora >= 0 and hora <= 459) or (hora >= 2300 and hora <= 2359):
+        if (hora >= 0 and hora <= 459) or (hora >= 2300 and hora <= 23590):
             engagament = "Engagement bajo"
         else:
             engagament = "Sin informacion"

@@ -18,3 +18,4 @@ for i in range(n):
     intervalo = tiempo_total / (t - 1)
     resultado = h_inicio + intervalo * (c - 1)
     print(resultado.strftime("%H:%M:%S"))
+    #hola como le a ido el dia de hoy
